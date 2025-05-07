@@ -1,0 +1,222 @@
+/* Базовые стили */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f0;
+  /* Яркий розовый фон для всей страницы */
+  color: #333;
+}
+
+/* Шапка */
+header {
+  background-color: #ff4d88;
+  /* Яркий розовый фон для шапки */
+  padding: 17px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Основной контент */
+main {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Секция "Мои работы" */
+.portfolio {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  color: #ff4d88;
+  margin-bottom: 20px;
+}
+
+.portfolio p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.portfolio-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(50% - 20px);
+  height: 400px;
+  max-width: 500px;
+  position: relative;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.portfolio-item p {
+  padding: 15px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff4d88;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Подвал */
+footer {
+  background-color: #ff4d88;
+  /* Яркий розовый фон */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Стили для кнопок */
+#lamination .btn,
+#extensions .btn {
+  display: inline-block;
+  background-color: #ff4d88;
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#lamination .btn:hover,
+#extensions .btn:hover {
+  background-color: #e63946;
+  /* Более темный розовый */
+  transform: scale(1.05);
+}
+
+#lamination .btn:active,
+#extensions .btn:active {
+  background-color: #c2185b;
+  transform: scale(1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  main {
+    padding: 20px 10px;
+  }
+
+  .portfolio-gallery {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portfolio-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .services h2 {
+    font-size: 24px;
+  }
+
+  #lamination,
+  #extensions {
+    padding: 20px;
+  }
+
+  #lamination h3,
+  #extensions h3 {
+    font-size: 22px;
+  }
+
+  #lamination p,
+  #extensions p {
+    font-size: 14px;
+  }
+
+  #lamination ul,
+  #extensions ul {
+    margin-left: 20px;
+  }
+
+  #lamination ul li,
+  #extensions ul li {
+    font-size: 14px;
+  }
+
+  #lamination .btn,
+  #extensions .btn {
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-gallery {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portfolio-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

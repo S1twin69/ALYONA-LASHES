@@ -1,0 +1,207 @@
+/* Базовые стили */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f0;
+  /* Яркий розовый фон для всей страницы */
+  color: #333;
+}
+
+/* Шапка */
+header {
+  background-color: #ff4d88;
+  /* Яркий розовый фон для шапки */
+  padding: 17px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Контент */
+main {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Секция знакомства */
+.about-me {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about-text p::before {
+  content: "👋 ";
+}
+
+/* Фото */
+.img-responsive {
+  width: 25%;
+  /* В 4 раза меньше ширины */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Второй блок текста */
+.love-job-text {
+  margin-top: 40px;
+  background-color: #ffb3d9;
+  /* Яркий светло-розовый фон */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.love-job-text h3 {
+  color: #ff4d88;
+  /* Яркий розовый для заголовков */
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.love-job-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.love-job-text p::before {
+  content: "💖 ";
+}
+
+/* Подвал */
+footer {
+  background-color: #ff4d88;
+  /* Яркий розовый фон */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+/* Стиль для кнопки "Записаться прямо сейчас!" */
+.why-choose .btn {
+  background-color: #ff4d88;
+  /* Яркий розовый цвет фона */
+  color: white;
+  /* Белый цвет текста */
+  padding: 15px 30px;
+  /* Отступы внутри кнопки */
+  border-radius: 30px;
+  /* Закругленные углы */
+  font-size: 1.2rem;
+  /* Увеличенный размер шрифта */
+  font-weight: 600;
+  /* Жирный шрифт */
+  text-decoration: none;
+  /* Убираем подчеркивание */
+  display: inline-block;
+  /* Блочный элемент для корректного выравнивания */
+  text-align: center;
+  /* Центрирование текста */
+  margin-top: 20px;
+  /* Отступ сверху */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Плавный переход для фона и трансформации */
+}
+
+.why-choose .btn:hover {
+  background-color: #e63946;
+  /* Более темный розовый при наведении */
+  transform: scale(1.05);
+  /* Легкое увеличение размера при наведении */
+}
+
+.why-choose .btn:active {
+  background-color: #c2185b;
+  /* Темный розовый при нажатии */
+  transform: scale(1);
+  /* Вернуться к исходному размеру */
+}
+
+/* Стиль для кнопки "Узнать больше" */
+.service-left .btn,
+.service-right .btn {
+  background-color: #ff4d88;
+  /* Яркий розовый цвет фона */
+  color: white;
+  /* Белый цвет текста */
+  padding: 12px 25px;
+  /* Отступы внутри кнопки */
+  border-radius: 30px;
+  /* Закругленные углы */
+  font-size: 1rem;
+  /* Размер шрифта */
+  font-weight: 600;
+  /* Жирный шрифт */
+  text-decoration: none;
+  /* Убираем подчеркивание */
+  display: inline-block;
+  /* Блочный элемент для корректного выравнивания */
+  text-align: center;
+  /* Центрирование текста */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Плавный переход для фона и трансформации */
+  margin-top: 15px;
+}
+
+.service-left .btn:hover,
+.service-right .btn:hover {
+  background-color: #ff6f91;
+  /* Темный розовый при наведении */
+  transform: scale(1.05);
+  /* Легкое увеличение размера при наведении */
+}
+
+.service-left .btn:active,
+.service-right .btn:active {
+  background-color: #c2185b;
+  /* Темный розовый при нажатии */
+  transform: scale(1);
+  /* Вернуться к исходному размеру */
+}
+
+/* Стили для footer */
+footer {
+  background-color: #ff4d88;
+  /* Яркий розовый фон */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

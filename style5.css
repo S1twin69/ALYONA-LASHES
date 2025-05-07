@@ -1,0 +1,159 @@
+/* Базовые стили */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f0;
+  /* Яркий розовый фон для всей страницы */
+  color: #333;
+}
+
+/* Шапка */
+header {
+  background-color: #ff4d88;
+  /* Яркий розовый фон для шапки */
+  padding: 17px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Основной контент */
+main {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #ff4d88;
+  /* Ярко-розовый цвет для заголовков */
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Стили для ссылок (телефон и email) */
+.contact-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4d88;
+  /* Ярко-розовый цвет для ссылок */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #e60073;
+  /* Немного темнее розовый при наведении */
+}
+
+.contact-link:active {
+  color: #c50061;
+  /* Еще более темный розовый при активном клике */
+}
+
+/* ВКонтакте блок */
+.vk-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+.vk-text a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.vk-text a:hover {
+  text-decoration: underline;
+}
+
+.vk-logo {
+  width: 16px;
+  /* Уменьшение размера логотипа */
+  height: 16px;
+  /* Уменьшение размера логотипа */
+  margin-right: 10px;
+  /* Отступ между логотипом и текстом */
+}
+
+/* Карта */
+.map-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Подвал */
+footer {
+  background-color: #ff4d88;
+  /* Яркий розовый фон */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  main {
+    padding: 20px 10px;
+  }
+
+  .contact-info h3 {
+    font-size: 16px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .contact-link {
+    font-size: 14px;
+  }
+
+  .vk-text {
+    font-size: 16px;
+  }
+
+  .vk-logo {
+    width: 14px;
+    /* Дополнительное уменьшение размера на мобильных устройствах */
+    height: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
