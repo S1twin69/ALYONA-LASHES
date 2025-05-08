@@ -1,0 +1,319 @@
+/* Базовые стили */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f0;
+  color: #333;
+}
+
+/* Шапка */
+header {
+  background-color: #ff4d88;
+  padding: 17px 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+nav .menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+nav .menu-toggle .bar {
+  background-color: white;
+  width: 25px;
+  height: 3px;
+}
+
+nav .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+  /* Меню выравнивается влево */
+}
+
+nav .nav-links li {
+  margin: 0 20px;
+}
+
+nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Контент */
+main {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Блок обо мне */
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 300px;
+  /* увеличено в 2 раза */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Секция "Почему выбирают меня" */
+.why-choose {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.why-choose h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-choose ul li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.why-choose .checkmark {
+  color: #ff4d88;
+  margin-right: 10px;
+}
+
+.why-choose .btn {
+  background-color: #ff4d88;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.why-choose .btn:hover {
+  background-color: #e63946;
+  transform: scale(1.05);
+}
+
+.why-choose .btn:active {
+  background-color: #c2185b;
+  transform: scale(1);
+}
+
+/* Секция услуг */
+.services-block {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+  color: #ff4d88;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.service .btn {
+  background-color: #ff4d88;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service .btn:hover {
+  background-color: #ff6f91;
+  transform: scale(1.05);
+}
+
+.service .btn:active {
+  background-color: #c2185b;
+  transform: scale(1);
+}
+
+/* Подвал */
+footer {
+  background-color: #ff4d88;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    /* Меню выравнивается влево */
+    padding-left: 20px;
+  }
+
+  nav .menu-toggle {
+    display: flex;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  .services-block {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .service .btn {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+  }
+
+  .why-choose .btn {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
+  }
+
+  .service .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .why-choose .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}

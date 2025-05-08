@@ -1,0 +1,195 @@
+/* Базовые стили */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f0;
+  color: #333;
+}
+
+/* Шапка */
+header {
+    background-color: #ff4d88;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1000;
+}
+
+.menu-toggle .bar {
+  background-color: white;
+  width: 25px;
+  height: 3px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  margin: 0 20px;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* About Me */
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+      max-width: 100%;
+      width: 50%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Why I Love My Job */
+.love-job-text {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.love-job-text h3 {
+  font-size: 2rem;
+  color: #ff4d88;
+  margin-bottom: 20px;
+}
+
+.love-job-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+/* Подвал */
+footer {
+  background-color: #ff4d88;
+    color: white;
+    text-align: center;
+    padding: 12px 3px;
+    margin-top: 158px;
+    font-size: 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 60%;
+  }
+
+  .love-job-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .love-job-text p {
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ff4d88;
+    padding: 20px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  .nav-menu ul li a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image img {
+    width: 80%;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}

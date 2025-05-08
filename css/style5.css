@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fff0f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #ff4d88;
+  padding: 15px 0;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  z-index: 2000;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ffccff;
+}
+
+/* Main */
+main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact h2 {
+  color: #ff4d88;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  margin-top: 20px;
+  color: #ff4d88;
+}
+
+.contact-link,
+.vk-link {
+  color: #ff4d88;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.vk-logo {
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  background-color: #ff4d88;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ff4d88;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,168 @@
+/* ===== Сброс и базовые стили ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff0f5;
+  color: #333;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Хедер и бургер меню ===== */
+header {
+  background-color: #ff4d88;
+  padding: 20px;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ffe6f0;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* ===== Основной контент ===== */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #ff4d88;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #cc3c72;
+}
+
+ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff4d88;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff99aa;
+}
+
+/* ===== Футер ===== */
+footer {
+  background-color: #ff4d88;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: auto;
+}
+
+/* ===== Мобильная версия ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #ff4d88;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+}
